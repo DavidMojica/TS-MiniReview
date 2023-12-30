@@ -4,3 +4,6 @@ console.log("Typescript");
 
 //Modo observador: Reflejar automaticamente los cambios en el archivo TS.
 //tsc app -w
+
+//Inicializar el archivo tsconfig
+//tsc --init
