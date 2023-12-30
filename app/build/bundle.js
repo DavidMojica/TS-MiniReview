@@ -20,4 +20,16 @@ let lista = ["Pepe1", "Pedro", "huevon"];
 for (const i of lista) {
     console.log(i);
 }
-console.log('app3');
+//TIPOS DE DATOS
+//BOOL
+let esCasado = false;
+//esCasado = 12; //ERROR
+let msg;
+msg = esCasado ? 'casado' : 'No casado';
+console.log(msg);
+esCasado = obtenerEstadoCivil(true);
+msg = esCasado ? 'casado' : 'No casado';
+console.log(msg);
+function obtenerEstadoCivil(state) {
+    return state;
+}
