@@ -17,8 +17,8 @@ function obtenerEstadoCivil(state:boolean): boolean{
 //NUMBER: INT - FLOAT ETC
 let numero:number = 12.9;
 
-let edad:number = 18;
-msg = edad >= 18 ? "Es mayor de edad" : "Es menor de edad";
+let edadex:number = 18;
+msg = edadex >= 18 ? "Es mayor de edad" : "Es menor de edad";
 console.log(msg);
 
 function obtenerEdad(num:number): number{
@@ -26,9 +26,9 @@ function obtenerEdad(num:number): number{
 }
 
 //String
-let nombre:string = "Dough";
+let nombreex:string = "Dough";
 let apellido:string = "Narval";
-let resultado:string = nombre + " " + apellido;
+let resultado:string = nombreex + " " + apellido;
 console.log(resultado);
 //Metodos
 //Mayusculas y minusculas
@@ -110,6 +110,62 @@ console.log(itemPiña);
 let persona: [string[], number, string, string[]];
 persona = [["luis", "narval"], 24, "masculino", ["nodejs", "Typescript"]];
 
-let [nombreP, edadP, genero, lenguajes] = persona;
+let [nombreP, edadP, generox, lenguajes] = persona;
 console.log(nombreP);
+
+//object destructuring
+let personaObject = {
+    nombre: ["Luis", "Narval"],
+    edad: 34,
+    genero: "masculino",
+    intereses: ["musica", "javascript"]
+}
+// let nombreObject:string[] = personaObject.nombre;
+// let edadObject:number = personaObject.edad;
+
+let {nombre, edad, genero, intereses} = personaObject;
+console.log(nombre);
+
+//SPREAD - Operador de propagacion. Es lo contrario a la destructuracion
+let nombres: string[] = ["pedro", "illo", "juan"];
+let numeros: number[] = [1,2,3,4,1,2,3,4];
+
+let agrupar =["Prueba", 100, ...nombres, ...numeros];
+console.log(agrupar);
+
+let libro = {
+    autor: "Oscar",
+    titulo: "WOM",
+    fecha: new Date(2023, 12, 6),
+}
+
+let vehiculo = {
+    color: "Negro",
+    puerta: "A31",
+    marca: "Toyota",
+}
+
+let agruparObjeto = {
+    prueba: "Test",
+    ...libro,
+    ...vehiculo,
+};
+
+//-----------DEFAULT & OPTIONAL VALUES----------------//
+//opcional: marcar con ? el final de la variable: val2?
+function getValues(objeto: { val1: string, val2?: number}): void{
+    let {val1, val2} = objeto;
+    console.log(val1);
+    console.log(val2)
+}
+
+getValues({val1: "camisa", val2: 23});
+
+function notify(text:string = "Default value"): void{
+    console.log(text);
+}
+
+notify();
+
+//------------CLASE Y OBJETOS---------------//
 
