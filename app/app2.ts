@@ -33,3 +33,29 @@ class Empleado extends Persona{
         this.numeroSeguridad = numeroSeguridad;
     }
 }
+
+//---------Propiedades readonly, get & set---------//
+class Libro{
+    readonly autor:string;
+    fechaPublicacion:string;
+    
+    private _titulo : string;
+    public get titulo() : string {
+        if (this._titulo){
+            return this._titulo;
+        } 
+        else{
+            return "Default";
+        }
+    }
+    public set titulo(v : string) {
+        this._titulo = v;
+    }
+    
+    constructor (titulo?:string){
+        this._titulo = titulo;
+    }
+}
+
+let libroInstance = new Libro();
+console.log(libroInstance.autor);
