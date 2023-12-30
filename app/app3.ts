@@ -48,29 +48,24 @@ let misc: (boolean | number)[] = [1, true, 2, false, -1];
 //tuplas
 let datos:[string, number];
 datos = ["a", 2];
-console.log(datos[0].toUpperCase());
 
 //Enum: Nos permite almacenar un conjunto de constantes con valor definido.
 enum Estado{
     activo, //0
     inactivo //1
 }
-console.log(Estado.activo);
 
 enum TiposDeUsuarios{
     supremo = 1,
     coordinadorSaludMental = 10,
     psicologo = 20,
 }
-console.log(TiposDeUsuarios.coordinadorSaludMental);
 
 //Any: Variable que admite cualquier tipo de dato
 let cualquierValor: any;
 cualquierValor = "Cualquier valor";
-console.log(cualquierValor.length);
 
 cualquierValor = false;
-console.log(cualquierValor);
 
 //void funciones que no retornan nada like c#
 function Stats(armor:number, life:number): void{
@@ -131,7 +126,6 @@ let nombres: string[] = ["pedro", "illo", "juan"];
 let numeros: number[] = [1,2,3,4,1,2,3,4];
 
 let agrupar =["Prueba", 100, ...nombres, ...numeros];
-console.log(agrupar);
 
 let libro = {
     autor: "Oscar",

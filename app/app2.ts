@@ -58,4 +58,3 @@ class Libro{
 }
 
 let libroInstance = new Libro();
-console.log(libroInstance.autor);
