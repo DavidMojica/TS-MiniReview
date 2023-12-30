@@ -21,10 +21,10 @@ for (const i of lista) {
     console.log(i);
 }
 //TIPOS DE DATOS
+let msg;
 //BOOL
 let esCasado = false;
 //esCasado = 12; //ERROR
-let msg;
 msg = esCasado ? 'casado' : 'No casado';
 console.log(msg);
 esCasado = obtenerEstadoCivil(true);
@@ -33,3 +33,14 @@ console.log(msg);
 function obtenerEstadoCivil(state) {
     return state;
 }
+//NUMBER: INT - FLOAT ETC
+let numero = 12.9;
+let edad = 18;
+msg = edad >= 18 ? "Es mayor de edad" : "Es menor de edad";
+console.log(msg);
+function obtenerEdad(num) {
+    return num;
+}
+//String
+let nombre = "Dough";
+let apellido = 1;
