@@ -164,8 +164,4 @@ getValues({val1: "camisa", val2: 23});
 function notify(text:string = "Default value"): void{
     console.log(text);
 }
-
 notify();
-
-//------------CLASE Y OBJETOS---------------//
-
