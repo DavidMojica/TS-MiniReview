@@ -72,3 +72,15 @@ console.log(cualquierValor.length);
 cualquierValor = false;
 console.log(cualquierValor);
 
+//void funciones que no retornan nada like c#
+function Stats(armor:number, life:number): void{
+    console.log(armor, life)
+}
+
+//Null & undefined desactivar strict
+let monto: number = null;
+
+//Type Assertions: Casteos, conversiones de tipo de dato
+let val: any = "Hi im a string";
+let res: number = (<string> val).length;
+let res2:number = (val as string).length;

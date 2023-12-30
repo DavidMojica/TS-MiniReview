@@ -1,4 +1,3 @@
-"use strict";
 console.log("Typescript");
 //Para ejecutar TS hay que compilar el archivo mediante la consola.
 //tsc app.ts
@@ -43,4 +42,53 @@ function obtenerEdad(num) {
 }
 //String
 let nombre = "Dough";
-let apellido = 1;
+let apellido = "Narval";
+let resultado = nombre + " " + apellido;
+console.log(resultado);
+//Metodos
+//Mayusculas y minusculas
+resultado = resultado.toUpperCase();
+resultado = resultado.toLowerCase();
+//Caracter en la posicion
+let chartIndex = resultado.charAt(1); //o
+//arrays
+//array de numeros
+let numbers = [1, 0, 10, 2];
+//array de strings
+let names = ["pedro", "illo", "juan"];
+//array de varios tipos de datos
+let misc = [1, true, 2, false, -1];
+//tuplas
+let datos;
+datos = ["a", 2];
+console.log(datos[0].toUpperCase());
+//Enum: Nos permite almacenar un conjunto de constantes con valor definido.
+var Estado;
+(function (Estado) {
+    Estado[Estado["activo"] = 0] = "activo";
+    Estado[Estado["inactivo"] = 1] = "inactivo"; //1
+})(Estado || (Estado = {}));
+console.log(Estado.activo);
+var TiposDeUsuarios;
+(function (TiposDeUsuarios) {
+    TiposDeUsuarios[TiposDeUsuarios["supremo"] = 1] = "supremo";
+    TiposDeUsuarios[TiposDeUsuarios["coordinadorSaludMental"] = 10] = "coordinadorSaludMental";
+    TiposDeUsuarios[TiposDeUsuarios["psicologo"] = 20] = "psicologo";
+})(TiposDeUsuarios || (TiposDeUsuarios = {}));
+console.log(TiposDeUsuarios.coordinadorSaludMental);
+//Any: Variable que admite cualquier tipo de dato
+let cualquierValor;
+cualquierValor = "Cualquier valor";
+console.log(cualquierValor.length);
+cualquierValor = false;
+console.log(cualquierValor);
+//void funciones que no retornan nada like c#
+function Stats(armor, life) {
+    console.log(armor, life);
+}
+//Null & undefined desactivar strict
+let monto = null;
+//Type Assertions: Casteos, conversiones de tipo de dato
+let val = "Hi im a string";
+let res = val.length;
+let res2 = val.length;
